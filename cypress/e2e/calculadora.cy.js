@@ -8,4 +8,10 @@ describe('Calculadora de Cadenas', () => {
       cy.get('#calcular-form').submit();
       cy.get('#resultado-div').should('contain', 'Suma de numeros de la cadena: 0');
     });
+
+    it('debería retornar el mismo número para una entrada de un solo número', () => {
+        cy.get('#cadena').clear().type('4');
+        cy.get('#calcular-form').submit();
+        cy.get('#resultado-div').should('contain', 'Suma de numeros de la cadena: 4');
+      });
   });
