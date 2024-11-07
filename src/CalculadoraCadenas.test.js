@@ -13,7 +13,10 @@ describe("Calcular cadena", () => {
   it("Debe devolver la suma de varios números", () => {
     expect(calculadoraDeCadena("4,3,2,1")).toEqual(10);
   });
-  it("Debe soportar delimitadores personalizados", () => {
+  it("Debe devolver la suma de numeros con - de separador", () => {
     expect(calculadoraDeCadena("8-12-4")).toEqual(24);
+  });
+  it("Debe soportar delimitadores personalizados", () => {
+    expect(calculadoraDeCadena("//[;] 8;6;4")).toEqual(18);
   });
 });
