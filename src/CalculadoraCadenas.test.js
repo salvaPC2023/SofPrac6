@@ -10,4 +10,8 @@ describe("Calcular cadena", () => {
   it("Debe devolver la suma de dos números separados por coma", () => {
     expect(calculadoraDeCadena("4,4")).toEqual(8);
   });
+  it("Debe devolver la suma de varios números", () => {
+    expect(calculadoraDeCadena("4,3,2,1")).toEqual(10);
+  });
+  
 });
