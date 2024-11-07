@@ -1,10 +1,19 @@
+<!DOCTYPE html>
 <html>
-  <body>
+<head>
+    <title>Calculadora De Cadenas</title>
+</head>
+<body>
     <h1>Calculadora De Cadenas</h1>
+
     <form id="calcular-form">
+        <label for="cadena">Ingrese los números:</label>
+        <input type="text" id="cadena" placeholder="Ejemplo: //[;] 8;12;4">
+        <button type="submit">Calcular</button>
     </form>
+
     <div id="resultado-div"></div>
 
-    <script type="module" src="./src/presenter.js"></script>
-  </body>
+    <script type="module" src="src/presenter.js"></script>
+</body>
 </html>
