@@ -1,5 +1,5 @@
-function calculadoraDeCadena(cadena) {
-    const numeros = cadena.split(",");
+function calculadoraDeCadena(cadena,delimitador) {
+    const numeros = cadena.replace(/-/g, ',').split(',');
     let resultado = 0;
     
     if (cadena !== "") {
