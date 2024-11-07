@@ -13,5 +13,11 @@ describe('Calculadora de Cadenas', () => {
         cy.get('#cadena').clear().type('4');
         cy.get('#calcular-form').submit();
         cy.get('#resultado-div').should('contain', 'Suma de numeros de la cadena: 4');
-      });
+    });
+
+    it('debería sumar dos números separados por coma', () => {
+    cy.get('#cadena').clear().type('4,4');
+    cy.get('#calcular-form').submit();
+    cy.get('#resultado-div').should('contain', 'Suma de numeros de la cadena: 8');
+    });
   });
