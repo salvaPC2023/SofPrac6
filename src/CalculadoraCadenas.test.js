@@ -7,4 +7,7 @@ describe("Calcular cadena", () => {
   it("Debe devolver el número cuando la cadena contiene un solo número", () => {
     expect(calculadoraDeCadena("4")).toEqual(4);
   });
+  it("Debe devolver la suma de dos números separados por coma", () => {
+    expect(calculadoraDeCadena("4,4")).toEqual(8);
+  });
 });
