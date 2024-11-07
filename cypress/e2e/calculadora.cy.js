@@ -26,5 +26,10 @@ describe('Calculadora de Cadenas', () => {
         cy.get('#calcular-form').submit();
         cy.get('#resultado-div').should('contain', 'Suma de numeros de la cadena: 10');
     });
-    
+
+    it('debería sumar números con delimitador personalizado', () => {
+        cy.get('#cadena').clear().type('//[;] 8;6;4');
+        cy.get('#calcular-form').submit();
+        cy.get('#resultado-div').should('contain', 'Suma de numeros de la cadena: 18');
+    });
   });
